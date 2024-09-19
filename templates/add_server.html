@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szerver hozzáadása</title>
+</head>
+<body>
+    <h1>Új szerver hozzáadása</h1>
+
+    <form action="{{ url_for('add_server') }}" method="POST">
+        <label for="name">Szerver neve:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="logo">Logó URL:</label><br>
+        <input type="text" id="logo" name="logo" required><br><br>
+
+        <label for="banner">Banner URL:</label><br>
+        <input type="text" id="banner" name="banner" required><br><br>
+
+        <label for="ip">IP cím:</label><br>
+        <input type="text" id="ip" name="ip" required><br><br>
+
+        <label for="description">Leírás:</label><br>
+        <input type="text" id="description" name="description" required><br><br>
+
+        <label for="version">Szerver verzió:</label><br>
+        <input type="text" id="version" name="version" required><br><br>
+
+        <label for="players">Játékosok száma:</label><br>
+        <input type="text" id="players" name="players" required><br><br>
+
+        <button type="submit">Hozzáadás</button>
+    </form>
+
+    <br>
+    <a href="{{ url_for('index') }}">Vissza a főoldalra</a>
+</body>
+</html>
